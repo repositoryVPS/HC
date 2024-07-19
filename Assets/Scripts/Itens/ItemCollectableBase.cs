@@ -10,7 +10,7 @@ public class ItemCollectableBase : MonoBehaviour
     public string compareTag = "Player";
     //public ParticleSystem particleSystem;
     public float timeToHide = 3;
-    public GameObject graphicItem;
+    private GameObject graphicItem;
 
     [Header("Sounds")]
     public AudioSource audioSource;
@@ -32,8 +32,8 @@ public class ItemCollectableBase : MonoBehaviour
     }
 
     protected virtual void Collect()
-    {
-        
+    {       
+        graphicItem = this.gameObject;
         if(graphicItem != null) graphicItem.SetActive(false);
         Invoke("HideObject",timeToHide);
         OnCollect();
