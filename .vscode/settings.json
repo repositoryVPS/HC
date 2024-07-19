@@ -51,5 +51,8 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "HC.sln"
+    "dotnet.defaultSolution": "HC.sln",
+    "editor.suggest.showMethods": true,
+    "typescript.implementationsCodeLens.showOnInterfaceMethods": true,
+    "omnisharp.enableAsyncCompletion": true
 }

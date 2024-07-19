@@ -27,12 +27,17 @@ public class ItemCollectableBase : MonoBehaviour
     {
         if (collision.transform.CompareTag(compareTag))
         {
-            Collect();
+            Collect(GetGraphicItem());
         }
     }
 
-    protected virtual void Collect()
-    {       
+    protected virtual GameObject GetGraphicItem()
+    {
+        return graphicItem;
+    }
+
+    protected virtual void Collect(GameObject graphicItem)
+    {
         graphicItem = this.gameObject;
         if(graphicItem != null) graphicItem.SetActive(false);
         Invoke("HideObject",timeToHide);
