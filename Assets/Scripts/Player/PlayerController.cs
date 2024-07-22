@@ -20,7 +20,7 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     { 
-        _canRun = true;
+        
     }
 
 
@@ -43,7 +43,10 @@ public class PlayerController : MonoBehaviour
             _canRun = false;
         }
     }
-
+    public void StartToRun()
+    {
+        _canRun = true;
+    }
 }
 
 
