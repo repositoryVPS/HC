@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class LoadSceneHelper : MonoBehaviour
+public class LoadScene : MonoBehaviour
 {
     public void Load(int i)
     {
@@ -15,3 +15,4 @@ public class LoadSceneHelper : MonoBehaviour
         SceneManager.LoadScene(i);
     }
 }
+
