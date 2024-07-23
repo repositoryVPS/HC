@@ -29,7 +29,7 @@ namespace PlayerController
 
         void Start()
         {
-            _startPosition = transform.position;
+         //   _startPosition = transform.position;
             ResetSpeed();
         }
 
