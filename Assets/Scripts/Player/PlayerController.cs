@@ -13,6 +13,7 @@ namespace PlayerController
     public class PlayerController : Singleton<PlayerController>
     {
         public float speed = 100f;
+        
         [Header("Lerp")]
         public Transform target;
         public float lerpSpeed = 10f;
@@ -20,9 +21,10 @@ namespace PlayerController
         public string tagToCheckEndLine = "EndLine";
         public GameObject startScreen;
         public GameObject endScreen;
-
-        private Vector3 _pos;
         public bool _canRun;
+
+        
+        private Vector3 _pos;
         private float _currentSpeed;
         private Transform _startPosition;
         public TextMeshProUGUI uiTextPowerUp;
