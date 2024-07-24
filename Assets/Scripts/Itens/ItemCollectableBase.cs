@@ -8,54 +8,54 @@ public class ItemCollectableBase : MonoBehaviour
 {
 
     public string compareTag = "Player";
-    //public ParticleSystem particleSystem;
+    public ParticleSystem particleSystem;
     public float timeToHide = 3;
-    private GameObject graphicItem;
+    public GameObject graphicItem;
 
     [Header("Sounds")]
     public AudioSource audioSource;
 
     private void Awake()
     {
-      //  if (particleSystem != null)
-     //   {
-      //      particleSystem.transform.SetParent(null);
-     //   }
+
     }
 
     private void OnTriggerEnter(Collider collision)
     {
         if (collision.transform.CompareTag(compareTag))
         {
-            Collect(GetGraphicItem());
+            Collect();
         }
     }
 
-    protected virtual GameObject GetGraphicItem()
+    // protected virtual GameObject GetGraphicItem()
+    // {
+    //      return graphicItem;
+    //  }
+
+    protected virtual void Collect()
     {
-        return graphicItem;
+        HideItens();
+        OnCollect();
     }
 
-    protected virtual void Collect(GameObject graphicItem)
+    private void HideItens()
     {
         graphicItem = this.gameObject;
-        if(graphicItem != null) graphicItem.SetActive(false);
-        Invoke("HideObject",timeToHide);
-        OnCollect();
-        
+        if (graphicItem != null) graphicItem.SetActive(false);
+        Invoke("HideObject", timeToHide);
     }
 
-
+    private void HideObjects()
+    {
+        gameObject.SetActive(false);
+    }
     protected virtual void OnCollect()
     {
-     //   if (particleSystem != null) particleSystem.Play();
-        if (audioSource != null)
+        if (particleSystem != null)
         {
-            audioSource.transform.parent = null;
-            audioSource.Play();
-            Destroy(audioSource.gameObject, 3f);
+            particleSystem.transform.SetParent(null);
+            particleSystem.Play();
         }
-        
-        
     }
 }
