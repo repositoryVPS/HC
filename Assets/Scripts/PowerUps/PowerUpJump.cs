@@ -10,12 +10,12 @@ public class PowerUpJump : PowerUpBase
     {
         base.StartPowerUp();
         PlayerManager.Instance.PowerUpJump();
-     //   PlayerManager.Instance.SetPowerUpText("Invencible");
+        PlayerManager.Instance.SetPowerUpText("Jump");
     }
     protected override void EndPowerUp()
     {
         base.EndPowerUp();
         PlayerManager.Instance.ResetJump();
-      //  PlayerManager.Instance.SetPowerUpText("");
+        PlayerManager.Instance.SetPowerUpText("");
     }
 }

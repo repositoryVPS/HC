@@ -19,15 +19,19 @@ public class PlayerManager : Singleton<PlayerManager>
     public string tagToCheckEndLine = "EndLine";
     public bool _canRun;
     public TextMeshProUGUI uiTextPowerUp;
+    public float endValue = 1f;
+    public float duration = 1f; 
 
     private bool invencible = false;
     private Vector3 _pos;
     private float _currentSpeed;
     private Vector3 _startPosition;
+    private float _inicialPosition;
 
     void Start()
     {
         _startPosition = transform.position;
+        _inicialPosition = transform.position.y;
         ResetSpeed();
     }
 
@@ -95,12 +99,11 @@ public class PlayerManager : Singleton<PlayerManager>
     }
     public void PowerUpJump()
     {
-      // transform.DOMoveY();
+       transform.DOMoveY(endValue,duration).SetEase(Ease.OutElastic);
     }
     public void ResetJump()
     {
-       
+       transform.DOMoveY(_inicialPosition,duration).SetEase(Ease.OutBack);
     }
-
     #endregion
 }

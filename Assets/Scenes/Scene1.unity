@@ -2452,6 +2452,8 @@ MonoBehaviour:
   tagToCheckEndLine: EndLine
   _canRun: 0
   uiTextPowerUp: {fileID: 881160467}
+  endValue: 1
+  duration: 2
 --- !u!1001 &2124644918
 PrefabInstance:
   m_ObjectHideFlags: 0
