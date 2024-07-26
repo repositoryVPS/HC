@@ -8,7 +8,7 @@ public class ItemCollectableBase : MonoBehaviour
 {
 
     public string compareTag = "Player";
-    public ParticleSystem particleSystem;
+   // public ParticleSystem particleSystem;
     public float timeToHide = 3;
     public GameObject graphicItem;
 
@@ -52,10 +52,10 @@ public class ItemCollectableBase : MonoBehaviour
     }
     protected virtual void OnCollect()
     {
-        if (particleSystem != null)
+        if (GetComponent<ParticleSystem>() != null)
         {
-            particleSystem.transform.SetParent(null);
-            particleSystem.Play();
+            GetComponent<ParticleSystem>().transform.SetParent(null);
+            GetComponent<ParticleSystem>().Play();
         }
     }
 }
