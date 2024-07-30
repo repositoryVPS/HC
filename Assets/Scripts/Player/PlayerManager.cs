@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using DG.Tweening;
+using UnityEngine.UIElements;
 
 
 public class PlayerManager : Singleton<PlayerManager>
@@ -20,7 +21,8 @@ public class PlayerManager : Singleton<PlayerManager>
     public bool _canRun;
     public TextMeshProUGUI uiTextPowerUp;
     public float endValue = 1f;
-    public float duration = 1f; 
+    public float duration = 1f;
+    public AnimatorManager animatorManager;
 
     private bool invencible = false;
     private Vector3 _pos;
@@ -28,6 +30,10 @@ public class PlayerManager : Singleton<PlayerManager>
     private Vector3 _startPosition;
     private float _inicialPosition;
 
+    void Awake()
+    {
+        animatorManager.Play(AnimatorManager.AnimationType.IDLE);
+    }
     void Start()
     {
         _startPosition = transform.position;
@@ -60,7 +66,11 @@ public class PlayerManager : Singleton<PlayerManager>
     {
         if (other.transform.tag == tagToCheckEndLine || other.transform.tag == tagToCheckEnemy)
         {
-            if (!invencible) EndGame();
+            if (!invencible)
+            {
+                EndGame();   
+            }
+
         }
     }
 
@@ -68,11 +78,13 @@ public class PlayerManager : Singleton<PlayerManager>
     {
         _canRun = true;
         startScreen.SetActive(false);
+        animatorManager.Play(AnimatorManager.AnimationType.RUN);
     }
     private void EndGame()
     {
         _canRun = false;
         endScreen.SetActive(true);
+        animatorManager.Play(AnimatorManager.AnimationType.DEATH);
     }
 
     #region POWER UPS
@@ -99,11 +111,11 @@ public class PlayerManager : Singleton<PlayerManager>
     }
     public void PowerUpJump()
     {
-       transform.DOMoveY(endValue,duration).SetEase(Ease.OutElastic);
+        transform.DOMoveY(endValue, duration).SetEase(Ease.OutElastic);
     }
     public void ResetJump()
     {
-       transform.DOMoveY(_inicialPosition,duration).SetEase(Ease.OutBack);
+        transform.DOMoveY(_inicialPosition, duration).SetEase(Ease.OutBack);
     }
     #endregion
 }

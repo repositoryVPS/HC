@@ -2198,6 +2198,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1402614957}
   m_CullTransparentMesh: 1
+--- !u!114 &1456069119 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4517713833081810431, guid: 89e20167823a30d459856414377997d1,
+    type: 3}
+  m_PrefabInstance: {fileID: 630180271}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5991528d133aafd4c85187a79652c156, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1496344686
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2769,6 +2781,7 @@ MonoBehaviour:
   uiTextPowerUp: {fileID: 881160467}
   endValue: 3
   duration: 1.8
+  animatorManager: {fileID: 1456069119}
 --- !u!1001 &2124644918
 PrefabInstance:
   m_ObjectHideFlags: 0

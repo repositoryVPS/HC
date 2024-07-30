@@ -21,7 +21,7 @@ public class AnimatorManager : MonoBehaviour
         {
             if(animation.type == type)
             {
-                animator.SetTrigger(animation.trigger   );
+                animator.SetTrigger(animation.trigger);
                 break;
             }
         }
