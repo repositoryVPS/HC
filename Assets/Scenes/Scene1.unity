@@ -609,9 +609,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   container: {fileID: 234746684}
-  levels:
-  - {fileID: 1887945673}
-  - {fileID: 687923895}
   levelPieces: []
   piecesNumber: 5
 --- !u!1 &285676816
@@ -1080,12 +1077,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 078d49cd7fd94c3449e439450814c27e, type: 3}
---- !u!1 &687923895 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 35354715001837293, guid: 078d49cd7fd94c3449e439450814c27e,
-    type: 3}
-  m_PrefabInstance: {fileID: 687923894}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &687923896 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7823127051382831473, guid: 078d49cd7fd94c3449e439450814c27e,
@@ -1402,13 +1393,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   container: {fileID: 234746684}
-  levels:
-  - {fileID: 1887945673}
-  - {fileID: 687923895}
   levelPieces:
   - {fileID: 5929617276180416681, guid: 0a972e69cd3c5cb4d8694173a2aa5004, type: 3}
   - {fileID: 6887059448130763384, guid: 7d7593a729a134c41af6538a7d7ffbfd, type: 3}
-  piecesNumber: 5
+  - {fileID: 6887059448130763384, guid: 7d7593a729a134c41af6538a7d7ffbfd, type: 3}
+  piecesNumber: 1
 --- !u!4 &991109174
 Transform:
   m_ObjectHideFlags: 0
@@ -2299,12 +2288,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1887945671}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1887945673 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 35354715001837293, guid: 7448c503854012a4d9eca3dbef8e919a,
-    type: 3}
-  m_PrefabInstance: {fileID: 1887945671}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &114082604953525060
 Transform:
   m_ObjectHideFlags: 0
@@ -2537,11 +2520,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Piece02
-      objectReference: {fileID: 0}
-    - target: {fileID: 2609912087767181675, guid: 7d7593a729a134c41af6538a7d7ffbfd,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

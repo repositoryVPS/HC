@@ -14,8 +14,8 @@ public class LevelManager : MonoBehaviour
     public int piecesNumber = 5;
 
     private int _index;
-
     private GameObject _currentlevel;
+
     private List<LevelPieceBase> _spawnedPieces;
 
     private void Awake()
@@ -48,7 +48,6 @@ public class LevelManager : MonoBehaviour
     private void CreateLevelPieces()
     {
         _spawnedPieces = new List<LevelPieceBase>();
-
         for (int i = 0; i < piecesNumber; i++)
         {
             CreateLevelPiece();
@@ -66,5 +65,6 @@ public class LevelManager : MonoBehaviour
         }
         _spawnedPieces.Add(spawnedPiece);
     }
+    
     #endregion
 }
