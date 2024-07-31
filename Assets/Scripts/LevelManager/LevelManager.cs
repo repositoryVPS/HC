@@ -6,8 +6,8 @@ public class LevelManager : MonoBehaviour
 {
     public Transform container;
 
-    [SerializeField]
-    public List<GameObject> levels;
+    // [SerializeField]
+    // public List<GameObject> levels;
 
     [Header("Pieces")]
     public List<LevelPieceBase> levelPieces;
@@ -23,26 +23,26 @@ public class LevelManager : MonoBehaviour
         //SpawnLevel();
         CreateLevelPieces();
     }
-    private void SpawnLevel()
-    {
-        if (_currentlevel != null)
-        {
-            Destroy(_currentlevel);
-            _index++;
+    // private void SpawnLevel()
+    // {
+    //     if (_currentlevel != null)
+    //     {
+    //         Destroy(_currentlevel);
+    //         _index++;
 
-            if (_index >= levels.Count)
-            {
-                ResetLevelIndex();
-            }
-        }
-        _currentlevel = Instantiate(levels[_index], container);
-        _currentlevel.transform.localPosition = Vector3.zero;
-    }
+    //         if (_index >= levels.Count)
+    //         {
+    //             ResetLevelIndex();
+    //         }
+    //     }
+    //     _currentlevel = Instantiate(levels[_index], container);
+    //     _currentlevel.transform.localPosition = Vector3.zero;
+    // }
 
-    private void ResetLevelIndex()
-    {
-        _index = 0;
-    }
+    // private void ResetLevelIndex()
+    // {
+    //     _index = 0;
+    // }
 
     #region
     private void CreateLevelPieces()
@@ -58,7 +58,6 @@ public class LevelManager : MonoBehaviour
     {
         var piece = levelPieces[Random.Range(0, levelPieces.Count)];
         var spawnedPiece = Instantiate(piece, container);
-
 
         if (_spawnedPieces.Count > 0)
         {
