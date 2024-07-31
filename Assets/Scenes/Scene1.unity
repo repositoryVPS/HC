@@ -571,7 +571,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 234746684}
-  - component: {fileID: 234746685}
   m_Layer: 0
   m_Name: LevelContainer
   m_TagString: Untagged
@@ -596,21 +595,6 @@ Transform:
   - {fileID: 1887945672}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &234746685
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 234746683}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d982bfe30e6b3c4f80bcf6e408144af, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  container: {fileID: 234746684}
-  levelPieces: []
-  piecesNumber: 5
 --- !u!1 &285676816
 GameObject:
   m_ObjectHideFlags: 0
@@ -1395,7 +1379,6 @@ MonoBehaviour:
   container: {fileID: 234746684}
   levelPieces:
   - {fileID: 5929617276180416681, guid: 0a972e69cd3c5cb4d8694173a2aa5004, type: 3}
-  - {fileID: 6887059448130763384, guid: 7d7593a729a134c41af6538a7d7ffbfd, type: 3}
   - {fileID: 6887059448130763384, guid: 7d7593a729a134c41af6538a7d7ffbfd, type: 3}
   piecesNumber: 5
 --- !u!4 &991109174
@@ -2520,6 +2503,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Piece02
+      objectReference: {fileID: 0}
+    - target: {fileID: 2609912087767181675, guid: 7d7593a729a134c41af6538a7d7ffbfd,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
