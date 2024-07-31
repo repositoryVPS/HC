@@ -1397,7 +1397,7 @@ MonoBehaviour:
   - {fileID: 5929617276180416681, guid: 0a972e69cd3c5cb4d8694173a2aa5004, type: 3}
   - {fileID: 6887059448130763384, guid: 7d7593a729a134c41af6538a7d7ffbfd, type: 3}
   - {fileID: 6887059448130763384, guid: 7d7593a729a134c41af6538a7d7ffbfd, type: 3}
-  piecesNumber: 1
+  piecesNumber: 5
 --- !u!4 &991109174
 Transform:
   m_ObjectHideFlags: 0
